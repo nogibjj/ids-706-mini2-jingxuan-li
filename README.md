@@ -1,5 +1,4 @@
-[![CI](https://github.com/nogibjj/ids-706-w7-jingxuan-li/actions/workflows/CI.yml/badge.svg)](https://github.com/nogibjj/ids-706-w7-jingxuan-li/actions/workflows/CI.yml)
-
+[![CI](https://github.com/nogibjj/ids-706-mini2-jingxuan-li/actions/workflows/CI.yml/badge.svg)](https://github.com/nogibjj/ids-706-mini2-jingxuan-li/actions/workflows/CI.yml)
 # Rust CLI Binary with SQLite
 ## What the project does
 The project is a command-line interface (CLI) tool written in Rust, designed to perform SQLite operations. Its main features include:
