@@ -109,7 +109,7 @@ export PATH=$PATH:/workspaces/<REPO_NAME>/sqlite/target/release
 
 
 ### Binary Download Link
-[Download Link](https://github.com/nogibjj/ids-706-w7-jingxuan-li/actions/runs/11491604094/artifacts/2096849372)
+[Download Link](https://github.com/nogibjj/ids-706-mini2-jingxuan-li/actions/runs/11604701019/artifacts/2126277831)
 
 
 
