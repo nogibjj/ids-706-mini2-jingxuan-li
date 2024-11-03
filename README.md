@@ -118,3 +118,5 @@ export PATH=$PATH:/workspaces/<REPO_NAME>/sqlite/target/release
 The project is configured with GitHub Actions, and the CI/CD process will automatically run on every push to the `main` branch or when a pull request is submitted. The CI configuration file is located at `.github/workflows/CI.yml`.
 
 ### Video link
+
+https://youtu.be/Uu4akdX7osQ?si=h9NpTwtmEV-UePyJ
