@@ -91,10 +91,11 @@ export PATH=$PATH:/workspaces/<REPO_NAME>/sqlite/target/release
 
 
 ### CRUD operation
-- `sqlite -c table` Create table `table1`.
-- `sqlite -l table ../data/RestaurantReviews.csv` Load data into table `table` from `../data/customer_new.csv`.
-- `sqlite -q "SELECT * FROM table;"` Query: `SELECT * FROM table;`
-- `sqlite -d table` Drop table `table`.
+- `sqlite -c table1` Create table `table1`.
+- `sqlite -l table1 ../data/RestaurantReviews.csv` Load data into table `table` from `../data/customer_new.csv`.
+- `sqlite -q "SELECT * FROM table1;"` Query: `SELECT * FROM table;`
+- `sqlite -u table1 1 5` update id 1's restaurant score to be 5
+- `sqlite -d table1` Drop table `table`.
 
 ### Use of LLM
 1. **Finding Rust Knowledge**: 

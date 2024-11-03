@@ -46,7 +46,15 @@ pub fn query_exec(conn: &Connection, query_string: &str) -> Result<()> {
 
     Ok(())
 }
-
+pub fn update_review_score(conn: &Connection, table_name: &str, id: i32, new_score: i32) -> Result<()> {
+    let update_query = format!(
+        "UPDATE {} SET review_score = ? WHERE id = ?",
+        table_name
+    );
+    conn.execute(&update_query, params![new_score, id])?;
+    println!("Review score updated successfully for ID: {}.", id);
+    Ok(())
+}
 //delete
 pub fn drop_table(conn: &Connection, table_name: &str) -> Result<()> {
     let drop_query = format!("DROP TABLE IF EXISTS {}", table_name);

@@ -2,7 +2,7 @@
 //user defined arguments and call lib.rs logic to handle them
 use clap::{Parser, Subcommand};
 use rusqlite::{Connection, Result};
-use sqlite::{create_table, drop_table, load_data_from_csv, query_exec}; //import library logic
+use sqlite::{create_table, drop_table, load_data_from_csv, query_exec, update_review_score}; //import library logic
 
 //Here we define a struct (or object) to hold our CLI arguments
 //for #[STUFF HERE] syntax, these are called attributes. Dont worry about them
@@ -31,6 +31,8 @@ enum Commands {
     ///Pass a query string to execute Read or Update operations
     #[command(alias = "q", short_flag = 'q')]
     Query { query: String },
+    #[command(alias = "u", short_flag = 'u')]
+    Update { table_name: String,id: i32, new_score: i32 },
     ///Pass a table name to drop
     #[command(alias = "d", short_flag = 'd')]
     Delete { delete_query: String },
@@ -58,6 +60,10 @@ fn main() -> Result<()> {
         Commands::Query { query } => {
             println!("Query: {}", query);
             query_exec(&conn, &query).expect("Failed to execute query");
+        }
+        Commands::Update { table_name, id, new_score } => {
+            println!("Updating review score for ID {} in table '{}'", id, table_name);
+            update_review_score(&conn, &table_name, id, new_score).expect("Failed to execute update");
         }
         Commands::Delete { delete_query } => {
             println!("Deleting: {}", delete_query);
